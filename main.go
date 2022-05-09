@@ -32,9 +32,11 @@ func incrementCounter (w http.ResponseWriter, r *http.Request) {
 
 
 func main() {
-	http.HandleFunc("/", echoString)
+	//http.HandleFunc("/", echoString)
 
 	http.HandleFunc("/increment", incrementCounter)
+
+	http.Handle("/", http.FileServer(http.Dir("./static")))
 
 	http.HandleFunc("/hi", func(w http.ResponseWriter, r *http.Request) {
         fmt.Fprintf(w, "Hi")
