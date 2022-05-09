@@ -22,3 +22,7 @@ to generate new config file
 ```go
 air init
 ```
+
+## Links used for reference
+
+1. https://tutorialedge.net/golang/creating-simple-web-server-with-golang/
